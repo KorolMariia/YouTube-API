@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(231, 230, 230);
+  background: url('../public/images/background.jpg') center /
+  cover no-repeat;
 }
 
 code {
@@ -17,6 +18,9 @@ code {
   background: rgba(234, 20, 20, 0.9)  !important;
 }  
 
+.descr {
+  background-color: rgba(174, 174, 174, 0.4);
+}
 .title {
   color:  rgba(234, 20, 20);
   margin: 5px 0;
@@ -27,4 +31,9 @@ code {
   font-style: italic;
   margin: 0;
   font-size: 12px;
+}
+
+.logo {
+  width: 120px;
+  height: 60px;
 }

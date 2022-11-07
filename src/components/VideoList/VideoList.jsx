@@ -1,4 +1,5 @@
-import { Component } from 'react';import Grid from '@mui/material/Grid';
+import { Component } from 'react';
+import Grid from '@mui/material/Grid';
 import ImageList from '@mui/material/ImageList';
 import VideoItem from '../VideoItem/VideoItem';
 
@@ -24,11 +25,10 @@ export default class VideoList extends Component {
             textAlign: 'end',
           }}
         >
-          YouTubeAPI
+          <img className="logo" src="/images/logo.png" alt="Logo" />
         </h2>
-        <h3 style={{ marginBottom: '0px', marginTop: '30px' }}>
-          Suggested videos:
-        </h3>
+
+        <h3 style={{ margin: '0px' }}>Suggested videos:</h3>
         <ImageList
           sx={{
             width: '100%',

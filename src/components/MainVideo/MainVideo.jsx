@@ -14,8 +14,10 @@ export default class MainVideo extends Component {
             allowFullScreen
           ></iframe>
         </div>
-        <h2 className="title">{this.props.item.snippet.title}</h2>
-        <h4 className="subtitle">{this.props.item.snippet.description}</h4>
+        <div className="descr">
+          <h2 className="title">{this.props.item.snippet.title}</h2>
+          <h4 className="subtitle">{this.props.item.snippet.description}</h4>
+        </div>
       </>
     );
   }
