@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import SearchLine from '../../components/SearchLine/SearchLine';
+import Header from '../../components/Header/Header';
 import VideoList from '../../components/VideoList/VideoList';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -30,23 +30,34 @@ export default class Main extends Component {
   };
 
   render() {
+    const { selectedVideo, item, items } = this.state;
     return (
-      <Box sx={{ flexGrow: 1, padding: '10px' }}>
-        <Grid container spacing={2}>
-          <Grid item md={8} xs={12}>
-            <SearchLine onSearchSubmit={this.onSearchSubmit} />
-            {Object.keys(this.state.selectedVideo).length !== 0 ? (
-              <MainVideo item={this.state.selectedVideo} />
-            ) : this.state.items.length > 0 ? (
-              <MainVideo item={this.state.item} />
+      <Box sx={{ flexGrow: 1 }}>
+        <Header onSearchSubmit={this.onSearchSubmit} />
+        <Grid
+          container
+          spacing={2}
+          style={{
+            marginTop: '10px',
+          }}
+        >
+          <Grid
+            item
+            md={8}
+            xs={12}
+            style={{
+              borderRight: '1px solid black',
+            }}
+          >
+            {Object.keys(selectedVideo).length !== 0 ? (
+              <MainVideo item={selectedVideo} />
+            ) : items.length > 0 ? (
+              <MainVideo item={item} />
             ) : (
               ''
             )}
           </Grid>
-          <VideoList
-            items={this.state.items}
-            selectedVideo={this.selectedVideo}
-          />
+          <VideoList items={items} selectedVideo={this.selectedVideo} />
         </Grid>
       </Box>
     );

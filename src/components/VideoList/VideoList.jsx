@@ -1,38 +1,31 @@
-import { Component } from 'react';
-import Grid from '@mui/material/Grid';
+import { Component } from 'react';import Grid from '@mui/material/Grid';
 import ImageList from '@mui/material/ImageList';
 import VideoItem from '../VideoItem/VideoItem';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 export default class VideoList extends Component {
   render() {
     if (!this.props.items.length) {
       return <h4> No results </h4>;
     }
-
     return (
       <Grid
         item
         md={4}
         xs={12}
-        style={{
-          paddingLeft: '30px',
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <h2
-          style={{
-            margin: '0',
-            color: 'red',
-            textAlign: 'end',
-          }}
-        >
-          <img className="logo" src="/images/logo.png" alt="Logo" />
-        </h2>
-
-        <h3 style={{ margin: '0px' }}>Suggested videos:</h3>
+        <h3 style={{ margin: '0 0 10px' }}>
+          Suggested videos <ArrowDownwardIcon sx={{ color: 'red' }} />
+        </h3>
         <ImageList
           sx={{
+            margin: '0',
             width: '100%',
-            height: '77vh',
+            height: '80vh',
             display: 'flex',
             flexDirection: 'column',
           }}
