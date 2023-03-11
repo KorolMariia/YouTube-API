@@ -1,11 +1,7 @@
 # YouTube-API
 [Demo](https://you-tube-api-six.vercel.app/)
 
-Here, you can:
-
-- search videos;
-- watch videos;
-- choose other videos from the suggested ones.
+The app utilizes the YouTube API to help users find videos easily. It features a search bar similar to YouTube's interface, enabling users to input their desired queries. Additionally, the app includes a carousel of recommended videos that users can easily navigate through.
 
 ## This project was bootstrapped with ReactJS class component.
 
